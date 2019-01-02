@@ -8,7 +8,8 @@ body {
   font-family: Helvetica, sans-serif;
   height: 100%;
   width: 100%;
-  background: palevioletred;
+  /* background: palevioletred; */
+  background: #EF665F;
   overflow-x: hidden;
 }
 
@@ -29,7 +30,7 @@ body {
 .poster-container {
   height: 90vh;
   width: 70vh;
-  background: lightblue;
+  background: #21BECF;
   position: relative;
   box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.4);
 }
@@ -62,12 +63,13 @@ body {
 .desc {
   position: absolute;
   z-index: 100;
-  bottom: 24px;
-  left: 88px;
+  bottom: 1rem;
+  left: 5.5rem;
   width: 25ch;
   font-size: 12px;
   line-height: 1.3;
-  color: #999;
+  color: #000;
+  opacity: 0.35;
 }
 
 .number {
@@ -94,24 +96,29 @@ body {
 
 
 .toc-container {
-  min-height: 100px;
-  width: 20%;
-  /* background: red; */
+  margin-top: 96px;
+  align-self: flex-start;
+  width: 25%;
 }
 
 .toc-title {
   color: #fff;
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
-.toc-container ul,
-.toc-container ul li a {
-  list-style-type: upper-roman;
+.link-container {
   color: #fff;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
-
-.toc-container ul li a {
-  opacity: 0.6;
+.link-container a {
+  color: #fff;
+  margin: 0 1rem 1rem 0;
+  font-size: 1.4rem;
 }
