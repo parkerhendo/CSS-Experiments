@@ -7,7 +7,7 @@
     <title>Experiment 001: CSS-Doodle</title>
     <style>
       body {
-        background: #000;
+        background: black;
         overflow: hidden; 
       }
       div {
@@ -23,19 +23,19 @@
     <div>
       <css-doodle>
         :doodle {
-          @grid: 1x10 / 85%;
+          @grid: 50x1 / 80%;
         }
 
         @place-cell: center;
-        @size: calc(@i() * 10%);
+        @size: calc(100% / @size() * @i());
 
-        border-radius: 50%;
-        border-style: dashed;
-        border-width: calc(@i() * 4px);
-        border-color: hsla(
-          calc(20 * @i()), 70%, 68%,
-          calc(3 / @i() * .8)
-        );
+        transition transform .2s ease;
+        transform: rotate(calc(@i() * 5deg));
+
+        border-radius: 30%;
+        border: 1px solid hsla(
+          calc(10 + 4 * @i()), 70%, 68%, @r(.8));
+        )
       </css-doodle>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.5.1/css-doodle.min.js"></script>
