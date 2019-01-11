@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Experiment 001: CSS-Doodle</title>
+    <style>
+      body {
+        background: #000;
+        overflow: hidden; 
+      }
+      div {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <css-doodle>
+        :doodle {
+          @grid: 1x10 / 85%;
+        }
+
+        @place-cell: center;
+        @size: calc(@i() * 10%);
+
+        border-radius: 50%;
+        border-style: dashed;
+        border-width: calc(@i() * 4px);
+        border-color: hsla(
+          calc(20 * @i()), 70%, 68%,
+          calc(3 / @i() * .8)
+        );
+      </css-doodle>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.5.1/css-doodle.min.js"></script>
+  </body>
+</html>
